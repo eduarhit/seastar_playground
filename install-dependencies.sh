@@ -57,6 +57,7 @@ debian_packages=(
     python3
     python3-pyelftools
     python3-yaml
+    libpython3-dev
     ragel
     stow
     systemtap-sdt-dev

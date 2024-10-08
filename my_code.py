@@ -1,2 +1,2 @@
-import seastar_lib
-print(seastar_lib.add(1, 5))
+import seastar_lib as seastar
+print(seastar.add(1, 10))
