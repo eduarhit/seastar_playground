@@ -9,7 +9,7 @@ seastar::logger lg("hello-world");
 static seastar::future<> hello_from_all_cores() {
     for (unsigned i = 0; i < seastar::smp::count; ++i) {
     co_await seastar::smp::submit_to(i, [] {
-        lg.info("App is running");
+        lg.info("App is running on core {}", seastar::this_shard_id());
         });
     }
     co_return;
